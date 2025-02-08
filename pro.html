@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="sTYLE1.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Profile Picture Module -->
+        <div class="profile-picture" id="profile-picture">
+            <img src="assets/default-profile.jpg" alt="Profile Picture" id="profile-img">
+            <input type="file" id="profile-picture-upload" accept="image/*" style="display: none;">
+            <label for="profile-picture-upload" class="upload-label">Change Picture</label>
+        </div>
+
+        <!-- Profile Name -->
+        <h2 id="profile-name">John Doe</h2>
+
+        <!-- Profile Details -->
+        <div class="profile-details" id="profile-details">
+            <p><strong>Email:</strong> <span id="profile-email">john.doe@example.com</span></p>
+            <p><strong>Phone:</strong> <span id="profile-phone">+1234567890</span></p>
+            <p><strong>Date of Birth:</strong> <span id="profile-dob">1990-01-01</span></p>
+            <p><strong>Gender:</strong> <span id="profile-gender">Male</span></p>
+            <p><strong>Address:</strong> <span id="profile-address">123 Main St, City, Country</span></p>
+        </div>
+
+        <!-- Profile Options -->
+        <div class="profile-options">
+            <button id="edit-profile-btn">Edit Profile</button>
+            <button id="help-center-btn">Help Center</button>
+            <button id="notifications-btn">Notifications</button>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="edit-profile-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal-btn">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Module -->
+    <div class="notification" id="notification">
+        Notification: You have a new message!
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="scripts.js"></script>
+</body>
+</html>
